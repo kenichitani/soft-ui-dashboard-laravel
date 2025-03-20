@@ -26,7 +26,9 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::get('/', [HomeController::class, 'home']);
 	Route::get('dashboard', function () {
-		return view('dashboard');
+		$data = array();
+		$data['title'] = '東横インテストホテル';
+		return view('dashboard',$data);
 	})->name('dashboard');
 
 	Route::get('billing', function () {
