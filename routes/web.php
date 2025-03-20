@@ -27,7 +27,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/', [HomeController::class, 'home']);
 	Route::get('dashboard', function () {
 		$data = array();
-		$data['title'] = '東横インテストホテル';
+		$data['title'] = '東横INN新宿歌舞伎町';
 		return view('dashboard',$data);
 	})->name('dashboard');
 
